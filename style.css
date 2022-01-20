@@ -1,0 +1,269 @@
+body{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    min-width  :100vw;
+    min-height: 100vh;
+    font-family: "Poppins";
+}
+
+
+header{
+    width : 100%;
+    height : 100px;
+    position : fixed;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    z-index : 1000;
+}
+
+header .hd{
+    width : 100%;
+    display : flex;
+    align-items: center;
+    justify-content: space-between;
+    margin : 0 50px;
+}
+header .logo img {
+    width : 80px;
+    cursor : pointer;
+}
+
+header .menu img {
+    width : 40px;
+    cursor : pointer;
+}
+header .menu img:hover{
+    background-color : lightgrey;
+    border-radius: 50%;
+}
+
+.main-section{
+    position : absolute;
+    top : 80px;
+    width : 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section {
+    width : 100%;
+    display : flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items : center;
+}
+
+.section .video{
+    width  :100%;
+    max-width : 450px;
+}
+
+video{
+    width : 100%;
+}
+/* .lower{
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+} */
+.text{
+    display : flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.text h2{
+    font-size : 2.5rem;
+    color : #203152;
+}
+.text p{
+    font-size : 1rem;
+    color : #4b5871;
+    margin-top: -30px;
+}
+
+hr{
+    border : 3px solid #203152;
+    width : 15px;
+    border-radius: 5px;
+    margin-top : -5px;
+}
+.download{
+    width : 100%;
+    display : flex;
+    justify-content: center;
+}
+
+.download div {
+    width : 60px;
+    margin : 10px;
+    cursor: pointer;
+}
+
+.trusted{
+    margin-top : -20px;
+    color : #203152;
+}
+.sidebar{
+    visibility: hidden;
+    left : 100%;
+}
+.sidebar.active{
+    visibility: visible;
+    position : fixed;
+    left :0px;
+    margin-top : -17px;
+    background : rgba(74, 48, 131, 0.97);
+    z-index : 1000000;
+    width : 100%;
+    color : white;
+    display : flex;
+    flex-direction: column;
+    align-items : flex-start;
+    padding-left : 10px;
+    height : 100vh;
+    transition : 0.3s;
+}
+.sidebar.active .hd-sidebar{
+    width  :100%;
+    display : flex;
+    justify-content: flex-end;
+}
+.sidebar.active .hd-sidebar div{
+    width : 45px;
+    display  :flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 15px;
+    margin-top : 10px;
+    margin-right : 20px;
+    cursor : pointer;
+}
+.sidebar.active .hd-sidebar img{
+    width  : 15px;
+    padding : 15px;
+    filter: invert(0);
+
+}
+.sidebar.active ul{
+    list-style : none;
+   margin-top : 0px;
+   font-size : 35px;
+   font-weight: 900;
+   line-height: 80px;
+   display : flex;
+   flex-direction: column;
+}
+
+.sidebar.active ul li{
+    cursor: pointer;
+}
+
+
+.hr-sidebar hr{
+    border : 3px solid white;
+    margin-left : 45px;
+    margin-top : -35px;
+}
+.sidebar.active p{
+    margin-left : 45px;
+    font-size:20px;
+    margin-top :  -10px;
+}
+.download-sidebar {
+    width  :120px;
+    margin-left : 45px;
+    display : flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.download-sidebar div {
+    width : 50px;
+    
+}
+.download-sidebar img{
+    width : 45px;
+}
+.nav-bar{
+    width  :0;
+    height: 0;
+    visibility: hidden;
+}
+@media (min-width  :960px){
+
+    .section{
+        display: flex;
+        flex-flow: row-reverse;
+        justify-content: flex-end;
+        margin-left : 50px;
+        margin-top : -50px;
+    }
+    .lower{
+        display:flex;
+        flex-flow: column;
+        margin-left : 0px;
+        margin-top : 0px;
+    }
+    .text{
+        align-items: flex-start;
+    }
+    .text h2{
+        font-size : 75px;
+        line-height: 70px;
+    }
+    .text p{
+        padding-left  :10px;
+        margin-top : 0px;
+    }
+    .text hr{
+        margin-left : 10px;
+        margin-top : 0px;
+    }
+    .download {
+        justify-content: flex-start;
+        margin-top : 50px;
+    }
+    .trusted{
+        margin-top : 0px;
+        padding-left  :10px;
+    }
+  .section .video{
+      margin-left : -0px;
+  }
+    video {
+        width : 650px;
+        padding-top : 100px;
+    }
+    .nav-bar{
+        width : 100%;
+        height : 60px;
+        position: fixed;
+        top : 10px;
+        visibility: visible;
+        z-index : 10000;
+        display : flex;
+        justify-content: flex-end;
+    }
+    .nav-bar ul{
+        width : 400px;
+        display  :flex;
+        list-style: none;
+        margin-right : 40px;
+        margin-top  :20px;
+        justify-content: space-between;
+        color :rgba(74, 48, 131, 0.97);
+    }
+    .nav-bar ul li{
+        padding  :10px;
+    }
+    .nav-bar ul li:hover{
+        cursor  :pointer;
+    }
+    .menu{
+        visibility: hidden;
+    }
+}
